@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Result Calculation apps</title>
+	<link rel="stylesheet" type="text/css" href="practise1.css">
+	<script type="text/javascript" src="quiz.js"></script>
+	<link rel="icon" type="jpg" href="D:\Bikal Thapa\web project\2.jpg">
+	<meta charset="viewport" >
+</head>
+<body id="body">
+	<h1>Students Grade Sheet Calculator</h1>
+
+	<hr><h1>Details</h1><hr>
+
+
+<div class="personaldetails">
+
+<input id="school" placeholder="School Name" type="name" autofocus><input id="result" placeholder="Result Publish Date" type="date"><br><br>
+<input id="address" placeholder="School Address" type="name"><input id="examination" placeholder="Terms of Exam"><br><br>
+<h3>Students Personal Details</h3>
+<input id="name" Placeholder="Enter Name of Student" type="Name">        <input id="class" Placeholder="Enter Class" type="number"><br><br>
+<input id="rollno" placeholder="Enter Roll No" type="number"><input id="mediumi" placeholder="Medium"><br><br>
+</div>
+
+
+
+<hr><h1>Marks Obtained In Some Subject</h1><hr>
+
+
+<div class="marks">
+	
+	<h3 class="fm">Full Marks<input  id="fm" type="number"></h3>
+	<h3 class="fmn">No Of Subject<input  id="fmn" type="number"></h3>
+	<h3>Pass Marks<input  id="pm" type="number"></h3>
+	
+	<h2>Obtained Marks in following subject</h2>
+	
+	<span class="left"><h3>Nepali<input  id="nepali" type="number"></h3></span>
+	<span class="right"><h3>English<input  id="english" type="number"></h3></span>
+
+	<span class="left"><h3>Math<input  id="math" type="number"></h3></span>        
+	<span class="right"><h3>Science<input  id="science" type="number"></h3></span>
+
+	<span class="left"><h3>Health<input  id="health" type="number"></h3></span>   
+	<span class="right"><h3>Occupation<input id="occupation" type="number"></h3></span>
+
+	<span class="left"><h3>OPT Math<input  id="optmath" type="number"></h3></span> 
+	<span class="right"><h3>Moral<input id="moral" type="number"></h3></span>
+
+	<span class="left"><h3>Computer<input id="computer" type="number"></h3></span> 
+	<span class="right"><h3>Social<input  id="social" type="number"></h3></span>
+
+	<span class="left"><h3>Account<input id="account" type="number"></h3></span><br><br><br><br><br><br><br><br><br>
+<button onclick="result()">Make Result</button><br><br>
+</div><br><br>
+
+
+<hr><h1>Final result</h1><hr><br>
+
+<div class="finalresult" id="finalr">
+<h1 id="schoolr">School Name</h1>
+<h3 id="schooladdress">School Address</h3>
+<h2 id="term">Examination Term</h2>
+<h3><u>GRADE-SHEET</u></h3>
+<h3 id="namer">Student Name</h3><h3 id="rollnor">Roll No</h3><br><br>
+
+<h3 id="classr">Class</h3>
+<h3 id="medium">Medium</h3><br><br><br>
+
+<table border="1px" cellspacing="0">
+	<tr>
+		<th>S.N &nbsp;&nbsp;</th>
+		<th>Subjects</th>
+		<th>F.M &nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>P.M &nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>O.M &nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>Remarks</th>
+
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>English</td>
+		<td id="fms"></td>
+		<td id="pmsa"></td>
+		<td id="omen"></td>
+		<td id="remarksen"></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Nepali</td>
+		<td id="fmq"></td>
+		<td id="pmsb"></td>
+		<td id="omne"></td>
+		<td id="remarksne"></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Mathematics</td>
+		<td id="fma"></td>
+		<td id="pmsc"></td>
+		<td id="omma"></td>
+		<td id="remarksma"></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Science</td>
+		<td id="fmb"></td>
+		<td id="pmsd"></td>
+		<td id="omsc"></td>
+		<td id="remarkssc"></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Social Studies</td>
+		<td id="fmc"></td>
+		<td id="pmse"></td>
+		<td id="omso"></td>
+		<td id="remarksso"></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Occupation</td>
+		<td id="fmd"></td>
+		<td id="pmsf"></td>
+		<td id="omoc"></td>
+		<td id="remarksoc"></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Moral</td>
+		<td id="fme"></td>
+		<td id="pmsg"></td>
+		<td id="ommo"></td>
+		<td id="remarksmo"></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Health And Physical&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td id="fmf"></td>
+		<td id="pmsh"></td>
+		<td id="omhe"></td>
+		<td id="remarkshe"></td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>OPT Mathematics</td>
+		<td id="fmg"></td>
+		<td id="pmsi"></td>
+		<td id="omop"></td>
+		<td id="remarksop"></td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Computer Science</td>
+		<td id="fmh"></td>
+		<td id="pmsj"></td>
+		<td id="omco"></td>
+		<td id="remarksco"></td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Account</td>
+		<td id="fmi"></td>
+		<td id="pmsk"></td>
+		<td id="omac"></td>
+		<td id="remarksac"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<th>Total</th>
+		<th id="fmtotal"></th>
+		<th id="pmtotal"></th>
+		<th id="omtotal"></th>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
+		<th id="percentage">Percentage: </th>
+		<th colspan="4" id="grade">Grade : </th>
+	</tr>
+</table>
+
+<h3 id="resultdate">Result Date</h3><h3 id="lremarks">Remarks</h3><br><br><br><br><br><br>
+<u class="classteacher">Class Teacher</u> <u class="schoolseal">School Seal</u><u class="headteacher">Head Teacher</u>
+<br><br><br>
+</div><br><br>
+<button onclick="printpage()">Print</button>
+
+</body>
+</html>
